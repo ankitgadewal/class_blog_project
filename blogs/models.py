@@ -8,3 +8,7 @@ class Blogs(models.Model):
 
     def __str__(self):
         return self.title
+
+class Users(models.Model):
+    comment = models.ForeignKey(Blogs, on_delete=models.CASCADE)
+
